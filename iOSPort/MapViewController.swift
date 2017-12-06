@@ -35,7 +35,7 @@ class MapViewController: UIViewController {
             pinList = [GMSMarker]()
             for report in keyList {
                 var date = dateToCompareValue(array: dateToIntArray(date: report.createdDate))
-                if date > start && date < end && report.uniqueKey != nil {
+                if date >= start && date <= end && report.uniqueKey != nil {
                     var marker = GMSMarker()
                     marker.position = CLLocationCoordinate2D(latitude: report.latitude, longitude: report.longitude)
                     marker.title = String(report.uniqueKey)

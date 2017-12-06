@@ -27,10 +27,11 @@ class GoogleMapsViewController: UIViewController {
         
         // Creates a marker in the center of the map.
         let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
+        marker.position = CLLocationCoordinate2D(latitude: keyList[0].latitude,longitude: keyList[0].longitude)
         marker.title = "Sydney"
         marker.snippet = "Australia"
         marker.map = mapView
+
         for marker in pinList {
             marker.map = mapView
         }
